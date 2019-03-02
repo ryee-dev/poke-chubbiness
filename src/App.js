@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { ApolloProvider, Query } from "react-apollo";
+import { ApolloProvider, Query } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
-import gql from "graphql-tag";
+import gql from 'graphql-tag';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -11,48 +11,50 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const client = new ApolloClient({
-  uri: "https://graphql-pokemon.now.sh/"
-  // uri: "https://48p1r2roz4.sse.codesandbox.io"
+  uri: 'https://graphql-pokemon.now.sh/',
 });
 
-client
-.query({
-  query: gql`
-    {
-      pokemons(first: 50) {
-        name
-        id
-      }
-    }
-  `
-})
-.then(result => console.log(result));
+const ChubbyPokemon = () => {
+  return (
+    <Query
+      query={gql`
+        {
+          pokemons(first: 150) {
+            id
+            name
+            image
+            weight {
+              minimum
+              maximum
+            }
+          }
+        }
+      `}
+    >
+      {({ loading, error, data }) => {
+        if (loading) return <p>Loading...</p>;
+        if (error) return <p>Error :(</p>;
 
-const ChubbyPokemon = () => (
-  <Query query={gql`
-  {
-    pokemons(first: 50) {
-      id
-      name
-      image
-    }
-  }
-  `}>
-    {({ loading, error, data }) => {
-      if (loading) return <p>Loading...</p>;
-      if (error) return <p>Error :(</p>;
-
-      return data.pokemons.map(({name, id, image}) => (
-        <div key={id}>
-          <div style={{ display: "flex", alignItems: 'center', justifyContent: 'space-evenly' }}>
-            <p>{name}</p>
-            <img src={image} alt={name} style={{ padding: '1rem' }} />
+        return data.pokemons.map(({ name, id, image, weight }) => (
+          <div key={id}>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-evenly',
+              }}
+            >
+              <p>
+                {name} | {weight.minimum} - {weight.maximum}
+              </p>
+              <img src={image} alt={name} style={{ padding: '1rem' }} />
+            </div>
           </div>
-        </div>
-      ));
-    }}
-  </Query>
-);
+        ));
+      }}
+    </Query>
+  );
+};
 
 class App extends Component {
   render() {
@@ -67,3 +69,20 @@ class App extends Component {
 }
 
 export default App;
+
+// client
+//   .query({
+//     query: gql`
+//       {
+//         pokemons(first: 50) {
+//           id
+//           name
+//           weight {
+//             minimum
+//             maximum
+//           }
+//         }
+//       }
+//     `,
+//   })
+//   .then(result => console.log(result));
