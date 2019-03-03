@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f879ffd-33d0-46f1-9616-8cadbd329694" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ChubbyPokemon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PokemonIndex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChubbyPokemon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChubbyPokemon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonIndex.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonIndex.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,7 +27,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="432">
@@ -41,11 +39,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/ChubbyPokemon.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="54" selection-start-line="54" selection-end-line="54" />
+                <state relative-caret-position="253">
+                  <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
                   <folding>
                     <element signature="e#70#107#0" expanded="true" />
                   </folding>
@@ -60,8 +58,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/PokemonIndex.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="518">
-                  <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+                <state relative-caret-position="180">
+                  <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -82,8 +80,8 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/components/PokeList.js" />
-        <option value="$PROJECT_DIR$/src/components/ChubbyPokemon.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/ChubbyPokemon.js" />
         <option value="$PROJECT_DIR$/src/components/PokemonIndex.js" />
       </list>
     </option>
@@ -168,12 +166,12 @@
       <option name="presentableId" value="Default" />
       <updated>1551489516864</updated>
       <workItem from="1551489524715" duration="5847000" />
-      <workItem from="1551581942323" duration="5070000" />
+      <workItem from="1551581942323" duration="5581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10917000" />
+    <option name="totallyTimeSpent" value="11428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1080" extended-state="0" />
@@ -254,16 +252,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ChubbyPokemon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#70#107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -274,10 +262,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ChubbyPokemon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+          <folding>
+            <element signature="e#70#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/PokemonIndex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+        <state relative-caret-position="180">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

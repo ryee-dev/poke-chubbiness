@@ -3,14 +3,12 @@ import styled from 'styled-components';
 
 class PokemonIndex extends React.Component {
   render() {
-    const { name, image, weight, minLbs, maxLbs } = this.props;
+    const { name, image, weight, avgLbs } = this.props;
     return (
       <Container>
         <h1>{name}</h1>
         <WeightWrapper>
-          <h2>
-            {minLbs} - {maxLbs}
-          </h2>
+          <h2>~{avgLbs} lbs</h2>
           <p>
             ({weight.minimum} - {weight.maximum})
           </p>

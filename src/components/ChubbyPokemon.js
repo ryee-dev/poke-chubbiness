@@ -10,16 +10,26 @@ export default class ChubbyPokemon extends React.Component {
 
     this.handleMinToLbs = this.handleMinToLbs.bind(this);
     this.handleMaxToLbs = this.handleMaxToLbs.bind(this);
+    this.handleAvgLbs = this.handleAvgLbs.bind(this);
   }
 
   handleMinToLbs = weight => {
     const minLbs = (parseFloat(weight.minimum) * 2.205).toFixed(2);
-    return `${minLbs}lbs`;
+    return minLbs;
   };
 
   handleMaxToLbs = weight => {
     const maxLbs = (parseFloat(weight.maximum) * 2.205).toFixed(2);
-    return `${maxLbs}lbs`;
+    return maxLbs;
+  };
+
+  handleAvgLbs = weight => {
+    const minLbs = parseFloat(weight.minimum) * 2.205;
+    const maxLbs = parseFloat(weight.maximum) * 2.205;
+    const avgLbs = ((minLbs + maxLbs) / 2).toFixed(2);
+    console.log(minLbs, maxLbs, avgLbs);
+
+    return avgLbs;
   };
 
   render() {
@@ -49,8 +59,9 @@ export default class ChubbyPokemon extends React.Component {
               name={name}
               image={image}
               weight={weight}
-              minLbs={this.handleMinToLbs(weight)}
-              maxLbs={this.handleMaxToLbs(weight)}
+              // minLbs={this.handleMinToLbs(weight)}
+              // maxLbs={this.handleMaxToLbs(weight)}
+              avgLbs={this.handleAvgLbs(weight)}
             />
           ));
         }}
